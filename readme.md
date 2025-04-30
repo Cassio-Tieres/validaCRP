@@ -12,3 +12,10 @@ O intuito é que seja reduzido o esforço do psicólogo ao consultar seus dados 
 * MongoDB
 * Pytesseract & tesseract
 * API Telegram
+
+# Casos de uso
+Três principais casos de uso foram mapeados para a utilização da Val (nome da nossa Agente de IA)
+
+1. Utilização para mensagens genéricas [imagem 1]
+2. Envio de foto do cartão de CRP para buscar status [imagem 2]
+3. Envio de nome para buscar status [imagem 3]
