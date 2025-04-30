@@ -19,7 +19,6 @@ async def processa_mensagem(update, context: ContextTypes.DEFAULT_TYPE):
         print(f"Mensagem recebida de {user.first_name} ({user.id}): {mensagem.text}")
         msg = retorna_mensagens_padrao(mensagem.text)
         resposta = responder_mensagem(msg)
-        print(resposta)
         await context.bot.send_message(chat_id=chat_id, text=resposta)
     elif mensagem.photo:
         print(f"Imagem recebida de {user.first_name} ({user.id})")
