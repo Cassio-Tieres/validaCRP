@@ -1,6 +1,6 @@
 # ValidaCRP
 
-Valida CRP é um agente de IA que ajuda o secretario do Conselho Regional de Psicologia e/ou a pessoa psicóloga a validar, de maneira fácil e prática, via telegram, a disponibilidade do CRP de determinado psicólogo/a/e.
+Valida CRP é um agente de IA que ajuda o secretario do Conselho Regional de Psicologia e/ou a pessoa psicóloga a validar, de maneira fácil e prática, via telegram, a disponibilidade do CRP de determinada pessoa psicóloga.
 
 O intuito é que seja reduzido o esforço do psicólogo ao consultar seus dados no cadastro.cfp.org.br.
 
