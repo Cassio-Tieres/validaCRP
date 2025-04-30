@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 from functions.processa_audios import transcreve_audio
 from database.db import retorna_mensagens_padrao
+from functions.ocr import ocr_image
+from functions.genai_config import gemini_analise_imagem
 load_dotenv()
 
 def verifica_texto(mensagem):
@@ -35,6 +37,14 @@ async def processa_mensagem(update, context: ContextTypes.DEFAULT_TYPE):
 
         resposta = responder_mensagem(f"Imagem recebida!")
         await context.bot.send_message(chat_id=chat_id, text=resposta)
+
+        texto_imagem = ocr_image(caminho_arquivo)
+        msg = gemini_analise_imagem(texto_imagem)
+        resposta = responder_mensagem(msg)
+        await context.bot.send_message(chat_id=chat_id, text=resposta)
+
+
+
     elif mensagem.voice:
         print(f"Áudio recebido de {user.first_name} ({user.id})")
         audio = mensagem.voice
