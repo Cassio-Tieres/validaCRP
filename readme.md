@@ -14,8 +14,11 @@ O intuito é que seja reduzido o esforço do psicólogo ao consultar seus dados 
 * API Telegram
 
 # Casos de uso
-Três principais casos de uso foram mapeados para a utilização da Val (nome da nossa Agente de IA)
 
-1. Utilização para mensagens genéricas [imagem 1]
-2. Envio de foto do cartão de CRP para buscar status [imagem 2]
-3. Envio de nome para buscar status [imagem 3]
+<img src="./img/ValidaCRP.png" alt="casos de uso"/>
+
+Temos alguns cenários que _ainda_ não foram desenhados:
+1. Usuário envia um áudio solicitando a validação;
+2. Através do texto direto ele solicita a validação.
+
+Estes cenários estão em backlog para serem arquitetados e posteriormente implementados ao código.

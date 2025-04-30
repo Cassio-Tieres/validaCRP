@@ -4,6 +4,7 @@ import re
 from dotenv import load_dotenv
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 from functions.processa_audios import transcreve_audio
+from database.db import retorna_mensagens_padrao
 load_dotenv()
 
 def verifica_texto(mensagem):
@@ -16,7 +17,9 @@ async def processa_mensagem(update, context: ContextTypes.DEFAULT_TYPE):
 
     if mensagem.text:
         print(f"Mensagem recebida de {user.first_name} ({user.id}): {mensagem.text}")
-        resposta = responder_mensagem(f"Olá, {user.first_name}!")
+        msg = retorna_mensagens_padrao(mensagem.text)
+        resposta = responder_mensagem(msg)
+        print(resposta)
         await context.bot.send_message(chat_id=chat_id, text=resposta)
     elif mensagem.photo:
         print(f"Imagem recebida de {user.first_name} ({user.id})")
